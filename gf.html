@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>สำหรับคนพิเศษของเรา</title>
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      text-align: center;
+      background-color: #ffe6e6;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #e60073;
+    }
+
+    p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .heart {
+      font-size: 40px;
+      color: red;
+      animation: heartbeat 1s infinite;
+      margin-top: 20px;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 5px 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .active {
+      background-color: #e60073;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ขอโทษนะคนดีของเค้า 🥺</h1>
+
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="LINE_ALBUM_22.6.67_250613_1.jpg" alt="รูปที่ 1">
+    </div>
+    <div class="mySlides">
+      <img src="LINE_ALBUM_03112024_250613_1.jpg" alt="รูปที่ 2">
+    </div>
+    <div class="mySlides">
+      <img src="LINE_ALBUM_22.6.67_250613_2.jpg" alt="รูปที่ 3">
+    </div>
+  </div>
+
+  <br>
+  <div>
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <p>เค้าขอโทษจริง ๆ ที่ทำให้เธอเสียใจ<br>
+    เเละทำให้เธอผิดหวัง เค้าจะปรับปรุงเเละเเก้ไขตัวเค้าให้เป็นผู้ชายที่คู่ควรกับเธอนะ
+    อยากให้เรากลับมายิ้มให้กันเหมือนเดิมนะ 
+    ดีกันนะค้าบ ง้อนะค้าบคนเก่งของเค้า 💕</p>
+
+  <div class="heart">❤️</div>
+
+  <!-- 🎵 เพลง Someone Like You (ใส่ไฟล์ในโฟลเดอร์เดียวกับไฟล์นี้) -->
+  <audio autoplay loop>
+    <source src="play.mp3" type="audio/mpeg">
+    เบราว์เซอร์ของคุณไม่รองรับเสียง
+  </audio>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+
+</body>
+</html>
